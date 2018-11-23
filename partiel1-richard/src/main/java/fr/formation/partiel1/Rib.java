@@ -1,27 +1,41 @@
 package fr.formation.partiel1;
 
+/**
+ * @author Richard Phonthibsvads
+ */
 public class Rib {
 
-    private int bankCode;
+    private String bankCode;
 
-    private int counterCode;
+    private String counterCode;
 
     private String accountNum;
 
-    private int ribKey;
+    private String ribKey;
 
-    public Rib(int bankCode, int counterCode, String accountNum, int ribKey) {
+    /**
+     * @param bankCode
+     *                    type String
+     * @param counterCode
+     *                    type String
+     * @param accountNum
+     *                    type String
+     * @param ribKey
+     *                    type String
+     */
+    public Rib(String bankCode, String counterCode, String accountNum,
+	    String ribKey) {
 	setBankCode(bankCode);
 	setCounterCode(counterCode);
 	setAccountNum(accountNum);
 	setRibKey(ribKey);
     }
 
-    public int getBankCode() {
+    public String getBankCode() {
 	return bankCode;
     }
 
-    public int getCounterCode() {
+    public String getCounterCode() {
 	return counterCode;
     }
 
@@ -29,14 +43,15 @@ public class Rib {
 	return accountNum;
     }
 
-    public int getRibKey() {
+    public String getRibKey() {
 	return ribKey;
     }
 
-    private void setBankCode(int bankCode) {
-        this.bankCode = bankCode;
+    private void setBankCode(String bankCode) {
+	this.bankCode = bankCode;
+    }
 
-    private void setCounterCode(int counterCode) {
+    private void setCounterCode(String counterCode) {
 	this.counterCode = counterCode;
     }
 
@@ -44,7 +59,7 @@ public class Rib {
 	this.accountNum = accountNum;
     }
 
-    private void setRibKey(int ribKey) {
+    private void setRibKey(String ribKey) {
 	this.ribKey = ribKey;
     }
 }
