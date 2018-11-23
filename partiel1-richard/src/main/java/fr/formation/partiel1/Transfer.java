@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author Richard Phonthibsvads
@@ -56,11 +55,10 @@ public class Transfer {
 	return Collections.unmodifiableList(accounts);
     }
 
-    public boolean addAccount(Account account) {
-	Objects.requireNonNull(account, "Currency is required");
-	return accounts.add(account);
-    }
-
+    // public boolean addAccount(Account account) {
+    // Objects.requireNonNull(account, "Currency is required");
+    // return accounts.add(account);
+    // }
     private void setAmount(double amount) {
 	if (amount <= 0.00) {
 	    throw new IllegalArgumentException(

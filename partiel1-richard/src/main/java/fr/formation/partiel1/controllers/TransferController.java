@@ -5,13 +5,11 @@ import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import fr.formation.partiel1.Account;
 import fr.formation.partiel1.Rib;
-import fr.formation.partiel1.Transfer;
 
 /**
  * @author Richard Phonthibsvads
@@ -33,14 +31,20 @@ public class TransferController {
      *                 type Account
      * @return all the accounts
      */
+    // @GET
+    // @Path("/all/ {accounts}")
+    // @Produces(MediaType.APPLICATION_JSON)
+    // public Transfer getAllAccounts(@PathParam("accounts") Account accounts) {
+    // for (int i = 0; i < accounts.length; i++) {
+    // Account accounts = String.valueOf(accounts[i]);
+    // return accounts;
+    // }
+    // }
     @GET
-    @Path("/all/ {accounts}")
+    @Path("/all")
     @Produces(MediaType.APPLICATION_JSON)
-    public Transfer getAllAccounts(@PathParam("accounts") Account accounts) {
-	for (int j = 0; j < accounts.length; j++) {
-	    Account accounts = String.valueOf(accounts[i]);
-	    return accounts;
-	}
+    public List<Account> getAllAccounts() {
+	return ACCOUNTS;
     }
 
     @SuppressWarnings("unused")
