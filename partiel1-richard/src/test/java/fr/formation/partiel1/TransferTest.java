@@ -8,8 +8,10 @@ import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
 
-@SuppressWarnings("javadoc")
-public class TransfertTest {
+/**
+ * @author Richard Phonthibsvads
+ */
+public class TransferTest {
 
     private final static LocalDate TIMESTAMP = LocalDate.now();
 

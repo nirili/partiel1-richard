@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author Richard Phonthibsvads
+ */
 public class AccountTest {
 
     private final static String COUNTRYCODE = "fr";

@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author Richard Phonthibsvads
+ */
 class RibTest {
 
     private final static String BANKCODE = "30050";
