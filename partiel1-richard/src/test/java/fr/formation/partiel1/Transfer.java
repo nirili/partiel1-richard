@@ -8,6 +8,24 @@ public class Transfer {
 
     LocalDate timestamp;
 
-    public Transfer(double amount, LocalDate now) {
+    public Transfer(double amount, LocalDate timestamp) {
+	setAmount(amount);
+	setTimestamp(timestamp);
+    }
+
+    public double getAmount() {
+	return amount;
+    }
+
+    public LocalDate getTimestamp() {
+	return timestamp;
+    }
+
+    private void setAmount(double amount) {
+	this.amount = amount;
+    }
+
+    private void setTimestamp(LocalDate timestamp) {
+	this.timestamp = timestamp;
     }
 }
