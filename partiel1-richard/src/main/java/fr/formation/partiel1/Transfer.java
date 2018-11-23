@@ -12,19 +12,27 @@ public class Transfer {
 
     private double amount;
 
-    LocalDate timestamp = LocalDate.now();
+    private Account emitter;
 
-    private List<Account> accounts = new ArrayList<>();
+    private Account beneficiary;
 
+    LocalDate executionDate = LocalDate.now();Account
+
+    // private List<Account> accounts = new ArrayList<>();
     /**
      * @param amount
-     *                  type double
+     *                           type double
+     * @param accountBeneficiary
+     * @param accountEmitter
      * @param timestamp
-     *                  type LocalDate
+     *                           type LocalDate
      */
-    public Transfer(double amount, LocalDate timestamp) {
+    public Transfer(double amount, Account emmitter, Account beneficiary,
+	    LocalDate timestamp) {
 	setAmount(amount);
-	setTimestamp(timestamp);
+	setExecutionDate(timestamp);
+	setEmitter(emmitter);
+	setBeneficiary(beneficiary);
     }
 
     /**
@@ -41,8 +49,8 @@ public class Transfer {
      *
      * @return timestamp
      */
-    public LocalDate getTimestamp() {
-	return timestamp;
+    public LocalDate getExecutionDate() {
+	return executionDate;
     }
 
     /**
@@ -54,11 +62,19 @@ public class Transfer {
 	// Defensive copy
 	return Collections.unmodifiableList(accounts);
     }
-
     // public boolean addAccount(Account account) {
     // Objects.requireNonNull(account, "Currency is required");
     // return accounts.add(account);
     // }
+
+    public Account getEmitter() {
+	return emitter;
+    }
+
+    public Account getBeneficiary() {
+	return beneficiary;
+    }
+
     private void setAmount(double amount) {
 	if (amount <= 0.00) {
 	    throw new IllegalArgumentException(
@@ -67,7 +83,15 @@ public class Transfer {
 	this.amount = amount;
     }
 
-    private void setTimestamp(LocalDate timestamp) {
-	this.timestamp = timestamp;
+    private void setExecutionDate(LocalDate timestamp) {
+	executionDate = timestamp;
+    }
+
+    private void setEmitter(Account emitter) {
+	this.emitter = emitter;
+    }
+
+    private void setBeneficiary(Account beneficiary) {
+	this.beneficiary = beneficiary;
     }
 }
