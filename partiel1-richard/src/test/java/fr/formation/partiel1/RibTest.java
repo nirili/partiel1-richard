@@ -2,16 +2,14 @@ package fr.formation.partiel1;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-import java.time.LocalDate;
-
 import org.junit.jupiter.api.Test;
 
-public class TransferTest {
+class RibTest {
 
     @Test
-    void shouldConstructTransfer() {
+    void shouldConstructRib() {
 	assertDoesNotThrow(() -> {
-	    new Transfer(1000.00, LocalDate.now()));
+	    new Rib(30042, 00550, "0000246810R", 75);
 	});
     }
 }

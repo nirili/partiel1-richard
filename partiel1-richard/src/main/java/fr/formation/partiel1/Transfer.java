@@ -2,12 +2,14 @@ package fr.formation.partiel1;
 
 import java.time.LocalDate;
 
+@SuppressWarnings("javadoc")
 public class Transfer {
 
     private double amount;
 
     LocalDate timestamp;
 
+    @SuppressWarnings("javadoc")
     public Transfer(double amount, LocalDate timestamp) {
 	setAmount(amount);
 	setTimestamp(timestamp);
