@@ -51,7 +51,7 @@ public class Transfer {
      *
      * @return accounts
      */
-    public List<Account> getAccounts() {
+    public List<Account> getAllAccounts() {
 	// Defensive copy
 	return Collections.unmodifiableList(accounts);
     }
