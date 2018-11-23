@@ -1,5 +1,7 @@
 package fr.formation.partiel1;
 
+import java.util.Objects;
+
 /**
  * @author Richard Phonthibsvads
  */
@@ -31,35 +33,59 @@ public class Rib {
 	setRibKey(ribKey);
     }
 
+    /**
+     * Method getBankCode() returns String bankCode
+     *
+     * @return bankCode
+     */
     public String getBankCode() {
 	return bankCode;
     }
 
+    /**
+     * Method getCounterCode() returns String counterCode
+     *
+     * @return counterCode
+     */
     public String getCounterCode() {
 	return counterCode;
     }
 
+    /**
+     * Method getAccontNum() returns String accountNum
+     *
+     * @return accountNum
+     */
     public String getAccountNum() {
 	return accountNum;
     }
 
+    /**
+     * Method getRibKey() returns String ribKey
+     *
+     * @return ribKey
+     */
     public String getRibKey() {
 	return ribKey;
     }
 
     private void setBankCode(String bankCode) {
+	Objects.requireNonNull(bankCode);
 	this.bankCode = bankCode;
     }
 
     private void setCounterCode(String counterCode) {
+	Objects.requireNonNull(counterCode);
 	this.counterCode = counterCode;
     }
 
     private void setAccountNum(String accountNum) {
+	Objects.requireNonNull(accountNum);
 	this.accountNum = accountNum;
     }
 
     private void setRibKey(String ribKey) {
+	Objects.requireNonNull(ribKey);
 	this.ribKey = ribKey;
     }
 }

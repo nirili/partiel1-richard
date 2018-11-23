@@ -22,16 +22,31 @@ public class TransfertTest {
 
     @SuppressWarnings("null")
     @Test
-    void shouldNotConstructTransfer() {
+    void shouldNotConstructNullAmountTransfer() {
 	assertThrows(NullPointerException.class, () -> {
 	    new Transfer((Double) null, TIMESTAMP);
 	});
     }
 
     @Test
+    void shouldNotConstructNullTimestampTransfer() {
+	assertThrows(NullPointerException.class, () -> {
+	    new Transfer(250.00, null);
+	});
+    }
+
+    // Transfer Class methods tests
+    @Test
     void shouldAmountBeEquals() {
 	Transfer transfer = new Transfer(250.00, TIMESTAMP);
 	double expected = transfer.getAmount();
 	assertEquals(250, expected);
+    }
+
+    @Test
+    void shouldTimestampBeEquals() {
+	Transfer transfer = new Transfer(250.00, TIMESTAMP);
+	LocalDate expected = transfer.getTimestamp();
+	assertEquals(TIMESTAMP, expected);
     }
 }

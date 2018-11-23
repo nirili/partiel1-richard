@@ -25,14 +25,29 @@ public class Account {
 	setRib(rib);
     }
 
+    /**
+     * Method getCountryCode() returns String countryCode
+     *
+     * @return countryCode
+     */
     public String getCountryCode() {
 	return countryCode;
     }
 
+    /**
+     * Method getControlKey() returns String controlkey
+     *
+     * @return controlKey
+     */
     public String getControlKey() {
 	return controlKey;
     }
 
+    /**
+     * Method getCountryCode() returns Rib rib
+     *
+     * @return rib
+     */
     public Rib getRib() {
 	return rib;
     }
