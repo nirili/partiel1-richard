@@ -11,10 +11,12 @@ import org.junit.jupiter.api.Test;
 @SuppressWarnings("javadoc")
 public class TransfertTest {
 
+    private final static LocalDate TIMESTAMP = LocalDate.now();
+
     @Test
     void shouldConstructTransfer() {
 	assertDoesNotThrow(() -> {
-	    new Transfer(1000.00, LocalDate.now());
+	    new Transfer(1000.00, TIMESTAMP);
 	});
     }
 
@@ -22,13 +24,13 @@ public class TransfertTest {
     @Test
     void shouldNotConstructTransfer() {
 	assertThrows(NullPointerException.class, () -> {
-	    new Transfer((Double) null, LocalDate.now());
+	    new Transfer((Double) null, TIMESTAMP);
 	});
     }
 
     @Test
     void shouldAmountBeEquals() {
-	Transfer transfer = new Transfer(250.00, LocalDate.now());
+	Transfer transfer = new Transfer(250.00, TIMESTAMP);
 	double expected = transfer.getAmount();
 	assertEquals(250, expected);
     }
